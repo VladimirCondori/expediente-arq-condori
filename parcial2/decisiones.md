@@ -17,3 +17,9 @@ Con una clase por franja la regla queda en un solo lugar.
 El SDK no se puede modificar y trabaja en ingles, centavos y tokens.
 Sin esto, ChargeCard queda regado por todo el codigo y cambiar de proveedor obliga a corregir todo.
 Con un adaptador uso mi propia interfaz y si cambian de proveedor solo hago otro adaptador.
+
+## P2.3
+
+Mi solucion cumple el principio Abierto/Cerrado (OCP).
+Se ve en CalculadoraTarifa, linea 33 de solucion.kt: `return franja.calcular(tarifaHora, horas)`, ahi ya no hay if/else por franja.
+Si el dueño agrega una franja nueva, por ejemplo feriado, solo creo una clase que implemente TarifaFranja y no modifico la calculadora ni lo que ya funciona.
