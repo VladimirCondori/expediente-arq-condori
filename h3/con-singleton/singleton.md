@@ -28,6 +28,9 @@ uno abierto a la vez, y todo movimiento se registra contra él. Aun así no ser�
 Singleton, sino una entidad con un índice único sobre `estado = ABIERTO`, porque es un
 dato que vive en la base de datos y cambia cada mes.
 
+Lo probé igual en `clase_8/codigo/PeriodoContable.kt`: ahí se ve el costo, porque hubo que
+agregarle un `reiniciarParaPruebas()` para que las pruebas no se contaminen entre si.
+
 ## Regla aplicada
 
 Antes de declarar algo Singleton: ¿único respecto de qué? Si es del negocio, va a la
